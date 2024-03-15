@@ -4,11 +4,13 @@ services:
     build: .
     environment:
       - CFP_MAPBOX_TOKEN_UPLOADER
-      - VACANT_LOTS_DB
+      - VACANT_LOTS_DB="postgresql://postgres:"${POSTGRESS_PASS}"@localhost/vacantlotdb"
       - VACANT_LOTS_DB_REMOTE
       - PYTHONUNBUFFERED=1
     volumes:
       - ./src:/usr/src/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   formatter:
     build: .
