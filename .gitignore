@@ -46,3 +46,6 @@ next-env.d.ts
 
 y/
 cleanandgreenphilly_gcloud_bucket/
+
+# docker enivroment variables
+/data/.env
