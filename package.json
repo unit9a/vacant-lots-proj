@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "tiles": "node src/scripts/buildTiles.js"
+    "tiles": "node src/scripts/buildTiles.js",
+    "tests": "cucumber-js test"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^10.3.1",
     "@heroicons/react": "^2.0.18",
     "@mapbox/mapbox-gl-geocoder": "^5.0.1",
     "@nextui-org/react": "^2.1.10",
@@ -38,6 +40,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.42.1",
     "@types/mapbox-gl": "^2.7.17",
     "@types/pbf": "^3.0.2",
     "@types/pg": "^8.10.2",
